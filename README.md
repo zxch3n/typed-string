@@ -1,11 +1,19 @@
 # Typed String
 
-> Use JSON.parse & JSON.stringify safely
+> Use JSON.parse & JSON.stringify safely with TypeScript 🥳
 
 ## Usage
 
+**Install**
+
+```
+yarn add -D typed-string
+```
+
+**Use in TypeScript**
+
 ```typescript
-import 'typed-string'
+import {StringifyFrom} from 'typed-string'
 
 /**
  * Get special string type `StringifyFrom<T>` after JSON.stringify.
@@ -32,7 +40,7 @@ const c = JSON.parse('"normal string"');
 const d = JSON.parse("{v: 123}" as StringifyFrom<{v: number}>); 
 ```
 
-It exposes `StringifyFrom<T>` type to global. StringifyFrom<T> is just string type:
+It exposes `StringifyFrom<T>` type. StringifyFrom<T> is just string type:
 
 ```typescript
 type StringifyFrom<T> = string & {

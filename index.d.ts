@@ -1,10 +1,10 @@
-export {};
+type StringifyFrom<T> = string & {
+  toString: () => StringifyFrom<T>;
+};
+
+export { StringifyFrom };
 
 declare global {
-  type StringifyFrom<T> = string & {
-    toString: () => StringifyFrom<T>;
-  };
-
   interface JSON {
     stringify<T = any>(
       value: T,
