@@ -1,7 +1,14 @@
 {
   "name": "typed-string",
   "version": "1.0.3",
-  "description": "",
+  "description": "Use JSON.parse & JSON.stringify safely with TypeScript 🥳",
+  "keywords": [
+    "typescript",
+    "JSON",
+    "stringify",
+    "serialize",
+    "deserialize"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
